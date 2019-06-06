@@ -9,19 +9,19 @@ int main()
   result();
 }
   int a,b,sum;
-  int getdata(int a,int b)
+  int getdata()
   {
     printf("enter the first number\n");
     scanf("%d",&a);
     printf("enter the second number\n");
     scanf("%d",&b);
   }
-  int add(int a,int b,int sum)
+  int add()
   {
     sum=a+b;
-printf("sum is:%d\n",sum);
+
   }
-  int result(int sum)
+  int result()
   {
-   // printf("sum is:%d",sum);
+   printf("sum is:%d",sum);
   }
