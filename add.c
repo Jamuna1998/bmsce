@@ -1,27 +1,25 @@
 #include<stdio.h>
-//int getdata(int,int);
-//int add(int,int,int);
-//int printdata(int);
 int main()
 {
-  getdata();
-  add();
-  result();
+int x,y,z;
+getdata(x,y );
+z=add(x,y);
+printdata(z);
+  
 }
-  int a,b,sum;
-  int getdata()
+  int getdata(int *a,int *b)
   {
-    printf("enter the first number\n");
-    scanf("%d",&a);
-    printf("enter the second number\n");
-    scanf("%d",&b);
-  }
-  int add()
+    printf("enter the numbers\n");
+    scanf("%d%d",a,b);
+ }
+  int add(int c,int d)
   {
-    sum=a+b;
-
+ int sum;
+    sum=c+d;
+    return sum;
   }
-  int result()
+  int printdata(int sum)
   {
    printf("sum is:%d",sum);
+   return 0;
   }
