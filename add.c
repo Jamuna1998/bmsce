@@ -12,7 +12,7 @@ int main()
   int add()
   {
     sum=a+b;
-    printf("sum is:"+sum);
+    printf("sum is:%d",sum);
   }
   int printdata()
   {
