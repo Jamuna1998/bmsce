@@ -1,1 +1,30 @@
 
+def get(array):
+    n=int(input("enter the size"))
+    for i in range(n):
+        y=int(input("enter the value"))
+        array.append(y)
+        i+=1
+    return array
+        
+          
+def compute(array):
+    mysum=0
+    for i in range(len(array)):
+        mysum=mysum+array[i]
+        i=i+1
+    return mysum
+
+def output(result):
+         print(result)
+
+def main():
+    
+         array=[]
+         n=0
+         array=get(array)
+         r=compute(array)
+         output(r)
+         
+main()  
+    
