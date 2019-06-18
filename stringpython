@@ -1,0 +1,24 @@
+def get():
+    string=str(input("enter the string:"))
+    return string
+
+def compute(string):
+   # n=str.len(string)
+    #for i in string:
+    r=string.split('=',4)
+    r=",".join(r)
+    re=r.split(';',4)
+    return re
+
+def output(string):
+    print(string)
+
+def main():
+    string=get()
+    r=compute(string)
+    output(r)
+    
+main()
+    
+    
+    
