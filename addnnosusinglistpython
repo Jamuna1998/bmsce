@@ -1,0 +1,31 @@
+def get():
+    l=[]
+    n=int(input("enter the size of list"))
+    x=int(input("enter the elements"))
+    for i in range(n):
+	
+        l.append(x)
+        length=len(l)
+    return length
+        
+          
+def compute(length):
+    mysum=0
+    for i in range(length):
+    	mysum=sum(length)
+    return mysum
+
+def output(result):
+         print(result)
+
+def main():
+    
+      
+         n=0
+         length=0
+         length=get()
+         mysum=compute(length)
+         output(mysum)
+         
+main()  
+    
