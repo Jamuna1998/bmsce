@@ -3,11 +3,9 @@ def get():
     return string
 
 def compute(string):
-   # n=str.len(string)
-    #for i in string:
-    r=string.split('=',4)
+    r=string.split('=')
     r=",".join(r)
-    re=r.split(';',4)
+    re=r.split(';')
     return re
 
 def output(string):
@@ -19,6 +17,5 @@ def main():
     output(r)
     
 main()
-    
     
     
