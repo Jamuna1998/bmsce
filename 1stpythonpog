@@ -1,0 +1,23 @@
+def get(a,b):
+    a=int(input("enter the first number"))
+    b=int(input("enter the second number"))
+    return a,b
+
+def add(a,b):
+    mysum=a+b
+    return mysum
+
+def output(a,b,mysum):
+    print(a,"+",b,"=",mysum)
+
+def main():
+    a,b=0,0
+    a,b=get(a,b)
+    mysum=add(a,b)
+    output(a,b,mysum)
+
+    
+    
+if __name__ == '__main__':
+    
+    main()
