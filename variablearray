@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+int input(int arr[])
+{
+int i,n;
+printf("enter the size of array\n");
+scanf("%d",&n);
+
+printf("enter the array of numbers");
+for(i=0;i<n;i++)
+{
+scanf("%d",&arr[n]);
+}
+return arr[n];
+}
+
+int sum(int arr[],int n)
+{
+int i;
+int sum=0;
+for(i=0;i<n;i++)
+{
+sum=sum+arr[i];
+}
+return sum;
+}
+
+int output(int sum)
+{
+printf("sum is=%d",sum);
+return 0;
+}
+
+int main()
+{
+int n,c,arr[10];
+n=sizeof(arr);
+input(arr);
+c=sum(arr,n);
+output(c);
+}
+
+
