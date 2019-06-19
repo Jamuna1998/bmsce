@@ -22,5 +22,6 @@ int main()
 int a,b,c;
 input(&a,&b);
 sum(a,b,&c);
+output(c);
 }
 
