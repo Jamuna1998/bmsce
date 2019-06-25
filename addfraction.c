@@ -3,9 +3,8 @@ struct fractions
 {
 int numerator;
 int denominator;
-typedef struct *p;
-}
-int input(int *p)
+}p;
+int input(int numerator,int denominator)
 {
 printf("enter the numerator\n");
 scanf("%d",&numerator);
@@ -14,36 +13,39 @@ scanf("%d",&denominator);
 return 0;
 }
 
-void sum(int *p,int *sum)
+
+
+int gcd(int numerator,int denominator)     
 {
 int ans;
+while(numerator!=denominator)
+{
 if(numerator>denominator)
 {
-ans=gcd(numerator-denominator,denominator);
+numerator=(numerator-denominator);
 }
-else if(denominator>numerator)
+else 
 {
-ans=gcd(numerator,denominator-numerator);
+denominator=(denominator-numerator);
 }
-sum=numerator+denominator/ans;
 }
-
-int gcd(int *p)
+return numerator;
+}
+void sum(int numerator,int denominator,int *s)
 {
-int ans;
-ans=gcd(denominator,numerator mod denominator)
-return ans;
+s=numerator+denominator/ans;
 }
-
 int ouput(int sum)
 {
 printf("%d",sum);
+return 0;
 }
 
 int main()
 {
-int *p,c;
-input(p);
-sum(p,&c);
+//struct fractions p;
+int a,b,c;
+input(a,b);
+sum(a,b,&c);
 output(c);
 }
