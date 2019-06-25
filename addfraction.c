@@ -17,7 +17,6 @@ return 0;
 
 int gcd(int numerator,int denominator)     
 {
-int ans;
 while(numerator!=denominator)
 {
 if(numerator>denominator)
@@ -33,9 +32,9 @@ return numerator;
 }
 void sum(int numerator,int denominator,int *s)
 {
-s=numerator+denominator/ans;
+*s=numerator+denominator/numerator;
 }
-int ouput(int sum)
+int output(int sum)
 {
 printf("%d",sum);
 return 0;
