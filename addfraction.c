@@ -1,50 +1,58 @@
 #include<stdio.h>
+
 struct fractions
 {
-int numerator;
-int denominator;
+int num;
+int deno;
 }p;
-int input(int numerator,int denominator)
+
+int input(int p)
 {
-printf("enter the numerator\n");
-scanf("%d",&numerator);
-printf("enter the denominator\n");
-scanf("%d",&denominator);
+int num1,num2,deno1,deno2;
+printf("enter first fraction");
+printf("enter the numerator and denominator\n");
+scanf("%d%d",&p.num1,&p.deno1);
+printf()"enter second fraction");
+printf("enter the numerator and denominator\n");
+scanf("%d%d",&p.num2,&p.deno2);
 return 0;
 }
 
-
-
-int gcd(int numerator,int denominator)     
+int gcd(int p)     
 {
-while(numerator!=denominator)
+while(p.num!=p.deno)
 {
-if(numerator>denominator)
+if(num>deno)
 {
-numerator=(numerator-denominator);
+num=(num-deno);
 }
 else 
 {
-denominator=(denominator-numerator);
+deno=(deno-num);
 }
 }
-return numerator;
+return num;
 }
-void sum(int numerator,int denominator,int *s)
+
+void sum(int p,int *s)
 {
-*s=numerator+denominator/numerator;
+int lcm;
+lcm=deno*deno;
+printf("%d%d",num1*deno1+num2*deno2,lcm);
+
 }
-int output(int sum)
+
+int output(int s)
 {
-printf("%d",sum);
+printf("sum of two fractions=%d",s);
 return 0;
 }
 
 int main()
 {
-//struct fractions p;
-int a,b,c;
-input(a,b);
-sum(a,b,&c);
+struct fractions p;
+int c;
+input(p);
+sum(p,&c);
 output(c);
 }
