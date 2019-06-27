@@ -37,8 +37,8 @@ return num;
 void sum(int p,int *s)
 {
 int lcm;
-lcm=deno*deno;
-printf("%d%d",num1*deno1+num2*deno2,lcm);
+lcm=deno1*deno2;
+printf("sum is=%d%d",num1*deno1+num2*deno2,lcm);
 
 }
 
