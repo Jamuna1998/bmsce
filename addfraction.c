@@ -18,14 +18,13 @@ void input_fraction(struct fraction *f1,struct fraction *f2)
 
 void sum_fraction(struct fraction f1,struct fraction f2,int *sum,int *total)
 {
-	printf("fraction=%d",f1.num);
 	*sum=0;
 	*sum=(f1.num*f2.deno)+(f1.deno*f2.num);
 	*total=f1.deno*f2.deno;
 }
-void display_fraction(int sum,int total)
+void display_fraction(struct fraction f1,struct fraction f2,int sum,int total)
 {	
-	printf("sum=%d/%d",sum,total);
+	printf("sum of %d/%dand%d/%d=%d/%d",f1.num,f1.deno,f2.num,f2.deno,sum,total);
 }
 	
 int main()
@@ -34,5 +33,5 @@ int main()
 	int sum,total;
 	input_fraction(&f1,&f2);
 	sum_fraction(f1,f2,&sum,&total);
-	display_fraction(sum,total);
+	display_fraction(f1,f2,sum,total);
 }
