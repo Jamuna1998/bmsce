@@ -16,22 +16,22 @@ void input_fraction(struct fraction *f1,struct fraction *f2)
 	
 }
 
-void sum_fraction(struct fraction f1,struct fraction f2,int *sum,int *total)
+void sum_fraction(struct fraction f1,struct fraction f2,int *numerator,int *denominator)
 {
-	*sum=0;
-	*sum=(f1.num*f2.deno)+(f1.deno*f2.num);
-	*total=f1.deno*f2.deno;
+	*numerator=0;
+	*numerator=(f1.num*f2.deno)+(f1.deno*f2.num);
+	*denominator=f1.deno*f2.deno;
 }
-void display_fraction(struct fraction f1,struct fraction f2,int sum,int total)
+void display_fraction(struct fraction f1,struct fraction f2,int numerator,int denominator)
 {	
-	printf("sum of %d/%dand%d/%d=%d/%d",f1.num,f1.deno,f2.num,f2.deno,sum,total);
+	printf("sum of %d/%dand%d/%d=%d/%d",f1.num,f1.deno,f2.num,f2.deno,numerator,denominator);
 }
 	
 int main()
 {	
 	struct fraction f1,f2;
-	int sum,total;
+	int numerator,denominator;
 	input_fraction(&f1,&f2);
-	sum_fraction(f1,f2,&sum,&total);
-	display_fraction(f1,f2,sum,total);
+	sum_fraction(f1,f2,&numerator,&denominator);
+	display_fraction(f1,f2,numerator,denominator);
 }
