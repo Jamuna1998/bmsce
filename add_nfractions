@@ -23,18 +23,23 @@ void input(struct fractions f[],int *n)
 
 void sum(struct fractions f[],int n,int *sum,int *gcdresult)
 {	
-	//int numerator,denominator;
+	int denominator,numerator;
 	int i;
 	*sum=0;
 	for(i=0;i<n;i++)
 
 	   { 
 	     	*gcdresult=GCD(f[i].deno,n);
-		int denominator=(f[i].deno*f[i+1].deno)/(*gcdresult);
-		int numerator=f[i].num*denominator/f[i].deno;
-                *sum=*sum+numerator;
+		denominator=(f[i].deno*f[i+1].deno)/(*gcdresult);
 	   }
+	for(i=0;i<n;i++)
+	    {
+		numerator=f[i].num*(*gcdresult)/(*gcdresult);
+		*sum=*sum+numerator;
+	    }
+	
 }
+
 
 int GCD(int a,int b)
 {
