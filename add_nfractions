@@ -21,21 +21,22 @@ void input(struct fractions f[],int *n)
 }
 
 
-void sum(struct fractions f[],int n,int *sum,int *gcdresult)
+void sum(struct fractions f[],int n,int *sum,int *denominator,int *numerator)
 {	
-	int denominator,numerator;
 	int i;
 	*sum=0;
+	int result=f[0].deno;
 	for(i=0;i<n;i++)
 
 	   { 
-	     	*gcdresult=GCD(f[i].deno,n);
-		denominator=(f[i].deno*f[i+1].deno)/(*gcdresult);
+	     	result=GCD(f[i].deno,result);
 	   }
+	printf("gcd=%d",result);
+	*denominator=(f[i].deno*f[i+1].deno)/(result);
 	for(i=0;i<n;i++)
 	    {
-		numerator=f[i].num*(*gcdresult)/(*gcdresult);
-		*sum=*sum+numerator;
+		*numerator=f[i].num*(*denominator)/(*denominator);
+		*sum=*sum+*numerator;
 	    }
 	
 }
@@ -43,13 +44,19 @@ void sum(struct fractions f[],int n,int *sum,int *gcdresult)
 
 int GCD(int a,int b)
 {
-	if(a==0)
-	   return b;
-        else
-	   return GCD(b%a,a);
+	
+ if (a == 0)
+{
+ return b;
+}
+ else
+{
+ return GCD(b % a, a);
+}
 }
 
-void display(struct fractions f[],int sum,int n,int gcdresult)
+
+void display(struct fractions f[],int sum,int n,int numerator,int denominator)
 {	
 	int i;
 	printf("sum of=");
@@ -57,13 +64,13 @@ void display(struct fractions f[],int sum,int n,int gcdresult)
 	   {    
 		printf("%d/%d,",f[i].num,f[i].deno);
 	   }
-printf("is=%d/%d",sum,gcdresult);
+printf("is=%d/%d",sum,denominator);
 }
 int main()
 {
 	struct fractions f[5];
-	int n,c,gcdresult;
+	int n,c,num,deno;
 	input(f,&n);
-	sum(f,n,&c,&gcdresult);
-	display(f,c,n,gcdresult);
+	sum(f,n,&c,&num,&deno);
+	display(f,c,n,num,deno);
 }
